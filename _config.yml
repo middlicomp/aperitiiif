@@ -1,6 +1,12 @@
 
-title:        aperitiiif
+title:        Aperitiiif 🥂
 baseurl:      /aperitiiif
 url:          ''
 source:       src
 theme:        just-the-docs
+color_scheme: dark
+
+aux_links_new_tab:  true
+aux_links:
+  GitHub:
+    - 'https://github.com/nyu-dss/aperitiiif'

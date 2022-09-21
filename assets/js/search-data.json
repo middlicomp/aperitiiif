@@ -1,2 +1,50 @@
-{
+{"0": {
+    "doc": "Add batch data",
+    "title": "Add batch data",
+    "content": " ",
+    "url": "/aperitiiif/user/add-batch-data.html",
+    "relUrl": "/user/add-batch-data.html"
+  },"1": {
+    "doc": "Admin Guide",
+    "title": "Admin Guide",
+    "content": " ",
+    "url": "/aperitiiif/admin.html",
+    "relUrl": "/admin.html"
+  },"2": {
+    "doc": "Update batch configuration",
+    "title": "Update batch configuration",
+    "content": " ",
+    "url": "/aperitiiif/user/config-batch.html",
+    "relUrl": "/user/config-batch.html"
+  },"3": {
+    "doc": "Project",
+    "title": "Project",
+    "content": " ",
+    "url": "/aperitiiif/",
+    "relUrl": "/"
+  },"4": {
+    "doc": "Overview",
+    "title": "Overview",
+    "content": " ",
+    "url": "/aperitiiif/project/overview.html",
+    "relUrl": "/project/overview.html"
+  },"5": {
+    "doc": "Roadmap",
+    "title": "Roadmap",
+    "content": " ",
+    "url": "/aperitiiif/project/roadmap.html",
+    "relUrl": "/project/roadmap.html"
+  },"6": {
+    "doc": "Set up a batch repository",
+    "title": "Set up a batch repository",
+    "content": " ",
+    "url": "/aperitiiif/admin/set-up-a-batch-repository.html",
+    "relUrl": "/admin/set-up-a-batch-repository.html"
+  },"7": {
+    "doc": "User Guide",
+    "title": "User Guide",
+    "content": " ",
+    "url": "/aperitiiif/user.html",
+    "relUrl": "/user.html"
+  }
 }

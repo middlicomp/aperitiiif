@@ -1,48 +1,114 @@
 {"0": {
     "doc": "Add batch data",
+    "title": "Add batch data Work in Progress!",
+    "content": " ",
+    "url": "/aperitiiif/user/add-batch-data.html#add-batch-data-work-in-progress",
+    "relUrl": "/user/add-batch-data.html#add-batch-data-work-in-progress"
+  },"1": {
+    "doc": "Add batch data",
     "title": "Add batch data",
     "content": " ",
     "url": "/aperitiiif/user/add-batch-data.html",
     "relUrl": "/user/add-batch-data.html"
-  },"1": {
-    "doc": "Admin Guide",
-    "title": "Admin Guide",
+  },"2": {
+    "doc": "Admin Guides",
+    "title": "Admin Guides Work in Progress!",
+    "content": " ",
+    "url": "/aperitiiif/admin.html#admin-guides-work-in-progress",
+    "relUrl": "/admin.html#admin-guides-work-in-progress"
+  },"3": {
+    "doc": "Admin Guides",
+    "title": "Admin Guides",
     "content": " ",
     "url": "/aperitiiif/admin.html",
     "relUrl": "/admin.html"
-  },"2": {
+  },"4": {
+    "doc": "Update batch configuration",
+    "title": "Update batch configuration Work in Progress!",
+    "content": " ",
+    "url": "/aperitiiif/user/config-batch.html#update-batch-configuration-work-in-progress",
+    "relUrl": "/user/config-batch.html#update-batch-configuration-work-in-progress"
+  },"5": {
     "doc": "Update batch configuration",
     "title": "Update batch configuration",
     "content": " ",
     "url": "/aperitiiif/user/config-batch.html",
     "relUrl": "/user/config-batch.html"
-  },"3": {
+  },"6": {
+    "doc": "Project",
+    "title": "nyu-dss/aperitiiif 🥂 Work in Progress!",
+    "content": "Small(ish) batch IIIF processing for digital research and scholarship.Leverages serverless-iiif, aws, and github. ",
+    "url": "/aperitiiif/#nyu-dssaperitiiif--work-in-progress",
+    "relUrl": "/#nyu-dssaperitiiif--work-in-progress"
+  },"7": {
     "doc": "Project",
     "title": "Project",
     "content": " ",
     "url": "/aperitiiif/",
     "relUrl": "/"
-  },"4": {
+  },"8": {
+    "doc": "Manage secrets and vars",
+    "title": "Manage secrets and vars Work in Progress!",
+    "content": " ",
+    "url": "/aperitiiif/admin/manage-secrets-and-env-vars.html#manage-secrets-and-vars-work-in-progress",
+    "relUrl": "/admin/manage-secrets-and-env-vars.html#manage-secrets-and-vars-work-in-progress"
+  },"9": {
+    "doc": "Manage secrets and vars",
+    "title": "Manage secrets and vars",
+    "content": " ",
+    "url": "/aperitiiif/admin/manage-secrets-and-env-vars.html",
+    "relUrl": "/admin/manage-secrets-and-env-vars.html"
+  },"10": {
+    "doc": "Overview",
+    "title": "Project Overview Work in Progress!",
+    "content": ". ",
+    "url": "/aperitiiif/project/overview.html#project-overview-work-in-progress",
+    "relUrl": "/project/overview.html#project-overview-work-in-progress"
+  },"11": {
+    "doc": "Overview",
+    "title": "Components",
+    "content": " ",
+    "url": "/aperitiiif/project/overview.html#components",
+    "relUrl": "/project/overview.html#components"
+  },"12": {
     "doc": "Overview",
     "title": "Overview",
     "content": " ",
     "url": "/aperitiiif/project/overview.html",
     "relUrl": "/project/overview.html"
-  },"5": {
+  },"13": {
+    "doc": "Roadmap",
+    "title": "Project Roadmap Work in Progress!",
+    "content": " ",
+    "url": "/aperitiiif/project/roadmap.html#project-roadmap-work-in-progress",
+    "relUrl": "/project/roadmap.html#project-roadmap-work-in-progress"
+  },"14": {
     "doc": "Roadmap",
     "title": "Roadmap",
     "content": " ",
     "url": "/aperitiiif/project/roadmap.html",
     "relUrl": "/project/roadmap.html"
-  },"6": {
+  },"15": {
+    "doc": "Set up a batch repository",
+    "title": "Set up a batch repository Work in Progress!",
+    "content": " ",
+    "url": "/aperitiiif/admin/set-up-a-batch-repository.html#set-up-a-batch-repository-work-in-progress",
+    "relUrl": "/admin/set-up-a-batch-repository.html#set-up-a-batch-repository-work-in-progress"
+  },"16": {
     "doc": "Set up a batch repository",
     "title": "Set up a batch repository",
     "content": " ",
     "url": "/aperitiiif/admin/set-up-a-batch-repository.html",
     "relUrl": "/admin/set-up-a-batch-repository.html"
-  },"7": {
-    "doc": "User Guide",
-    "title": "User Guide",
+  },"17": {
+    "doc": "User Guides",
+    "title": "User Guides Work in Progress!",
+    "content": " ",
+    "url": "/aperitiiif/user.html#user-guides-work-in-progress",
+    "relUrl": "/user.html#user-guides-work-in-progress"
+  },"18": {
+    "doc": "User Guides",
+    "title": "User Guides",
     "content": " ",
     "url": "/aperitiiif/user.html",
     "relUrl": "/user.html"

@@ -35,102 +35,120 @@
     "url": "/aperitiiif/user/config-batch.html",
     "relUrl": "/user/config-batch.html"
   },"6": {
+    "doc": "Credits",
+    "title": "Credits Work in Progress!",
+    "content": "Thanks to the authors and maintainers of the following open source libraries . | serverless-iiif | o’sullivan | . … and the following individual contributors . | TODO | . ",
+    "url": "/aperitiiif/project/credits.html#credits-work-in-progress",
+    "relUrl": "/project/credits.html#credits-work-in-progress"
+  },"7": {
+    "doc": "Credits",
+    "title": "Credits",
+    "content": " ",
+    "url": "/aperitiiif/project/credits.html",
+    "relUrl": "/project/credits.html"
+  },"8": {
     "doc": "Project",
     "title": "nyu-dss/aperitiiif 🥂 Work in Progress!",
-    "content": "Small(ish) batch IIIF processing for digital research and scholarship.Leverages serverless-iiif, aws, and github. ",
+    "content": "Small(ish) batch IIIF processing for digital research and scholarship. Leverages Serverless-IIIF, AWS, and GitHub. ",
     "url": "/aperitiiif/#nyu-dssaperitiiif--work-in-progress",
     "relUrl": "/#nyu-dssaperitiiif--work-in-progress"
-  },"7": {
+  },"9": {
     "doc": "Project",
     "title": "Project",
     "content": " ",
     "url": "/aperitiiif/",
     "relUrl": "/"
-  },"8": {
+  },"10": {
     "doc": "Manage secrets and vars",
     "title": "Manage secrets and vars Work in Progress!",
     "content": " ",
     "url": "/aperitiiif/admin/manage-secrets-and-env-vars.html#manage-secrets-and-vars-work-in-progress",
     "relUrl": "/admin/manage-secrets-and-env-vars.html#manage-secrets-and-vars-work-in-progress"
-  },"9": {
+  },"11": {
     "doc": "Manage secrets and vars",
     "title": "Manage secrets and vars",
     "content": " ",
     "url": "/aperitiiif/admin/manage-secrets-and-env-vars.html",
     "relUrl": "/admin/manage-secrets-and-env-vars.html"
-  },"10": {
-    "doc": "Overview",
-    "title": "Project Overview Work in Progress!",
-    "content": ". | Abstract | Architecture | Workflow | . ",
-    "url": "/aperitiiif/project/overview.html#project-overview-work-in-progress",
-    "relUrl": "/project/overview.html#project-overview-work-in-progress"
-  },"11": {
-    "doc": "Overview",
-    "title": "Abstract",
-    "content": "TODO . ",
-    "url": "/aperitiiif/project/overview.html#abstract",
-    "relUrl": "/project/overview.html#abstract"
   },"12": {
     "doc": "Overview",
-    "title": "Architecture",
-    "content": ". | Canonical Metadata and Image Data a. GitHub Repo . | IIIF Image API a. serverless-iiif implementation b. Source image S3 bucket c. GitHub Action uses aperitiiif gem to process images, syncs them to S3 source bucket . | IIIF Presentation API a. S3 bucket for published json b. GitHub Action uses aperitiiif gem to generate IIIF Presentation API resources, syncs them to S3 presentation bucket . | Discovery a. Github Action uses aperitiiif gem to generate 2 indices of resources produced (index.html for humans, index.json for machines), publishes them to Github Pages . | . ",
-    "url": "/aperitiiif/project/overview.html#architecture",
-    "relUrl": "/project/overview.html#architecture"
+    "title": "Project Overview Work in Progress!",
+    "content": ". | Description | Glossary | Relevant repositories | Service architecture . | Diagram | Scoped components (1 per batch) | Shared components (1 per service) | . | . ",
+    "url": "/aperitiiif/project/overview.html#project-overview-work-in-progress",
+    "relUrl": "/project/overview.html#project-overview-work-in-progress"
   },"13": {
     "doc": "Overview",
-    "title": "Workflow",
-    "content": "Setup (GitHub) . | Admin creates repo for new collection using aperitiiif-batch-template named aperitiiif-batch-collectionname where collectionname will be the namespace used for resources generated. | Admin adds S3 secrets to the repo enviroment. | Admin enables Actions and GitHub pages on the repo. | Admin gives curator(s) write access to the repo. They can add images and metadata but cannot access settings or secrets. | . Ingest (GitHub) . | Curator adds images to src/data directory (multipart object structure TBD) and metadata via CSV file to src/metadata. | Curator adds metadata defaults as needed to the config.yml file | When committed to the main branch, a GitHub Action will convert images to tif, namespace them by prepending the collection name and any subfolder names, and sync them to the S3 source image bucket. | It will also use the O’Sullivan gem to generate Presentation API JSON resources (e.g., manifests, canvases, etc.) and sync them to the S3 presentation bucket. | Lastly, it will also create listings of resources published (html and json) and deploy them to GitHub pages. | . Publish (AWS) . | The Presentation API resources that have been synced are done and ready. There is no additional work for AWS to do. | The images synced to the S3 source image bucket are now accessible by the serverless-iiif lambda policy. Requests that hit the IIIF Image API lambdas (via Cloudfront) trigger derivative builds to an S3 cache bucket. | . ",
-    "url": "/aperitiiif/project/overview.html#workflow",
-    "relUrl": "/project/overview.html#workflow"
+    "title": "Description",
+    "content": "TODO . ",
+    "url": "/aperitiiif/project/overview.html#description",
+    "relUrl": "/project/overview.html#description"
   },"14": {
+    "doc": "Overview",
+    "title": "Glossary",
+    "content": "TODO . ",
+    "url": "/aperitiiif/project/overview.html#glossary",
+    "relUrl": "/project/overview.html#glossary"
+  },"15": {
+    "doc": "Overview",
+    "title": "Relevant repositories",
+    "content": ". | aperitiiif-cli : ruby gem for processing batches | aperitiiif-batch-template : template repository for creating batches; includes github actions workflows, gem configs, and project scaffolding. | aperitiiif : documentation for the project; publishes to this site on github pages | . ",
+    "url": "/aperitiiif/project/overview.html#relevant-repositories",
+    "relUrl": "/project/overview.html#relevant-repositories"
+  },"16": {
+    "doc": "Overview",
+    "title": "Service architecture",
+    "content": "Diagram . Scoped components (1 per batch) . | Name | Type/Tool | Purpose | . | Batch repo | GitHub repository | Stores batch image data, metadata, and configuration | . | YAML Workflows | GitHub Actions | Reusable processes to lint and publish batch data | . | Catalog site | GitHub Pages | For graphical batch reuse &amp; discovery | . Shared components (1 per service) . | Name | Type/Tool | Purpose | . | IIIF Presentation API | AWS S3 Bucket | Where the IIIF Presentation API manifests for all batches are published | . | IIIF Source Image API S3 Bucket | AWS S3 Bucket | Where the source images for all batches are stored (in jpg format) | . | Serverless-IIIF implementation | AWS Lambda | The \"serverless\" image server that produces IIIF Image API-compliant derivatives | . | Organization Secrets | GitHub secrets store | Where AWS credentials are managed and stored | . ",
+    "url": "/aperitiiif/project/overview.html#service-architecture",
+    "relUrl": "/project/overview.html#service-architecture"
+  },"17": {
     "doc": "Overview",
     "title": "Overview",
     "content": " ",
     "url": "/aperitiiif/project/overview.html",
     "relUrl": "/project/overview.html"
-  },"15": {
+  },"18": {
     "doc": "Roadmap",
     "title": "Project Roadmap Work in Progress!",
     "content": ". | Current &amp; Upcoming | Past | . ",
     "url": "/aperitiiif/project/roadmap.html#project-roadmap-work-in-progress",
     "relUrl": "/project/roadmap.html#project-roadmap-work-in-progress"
-  },"16": {
+  },"19": {
     "doc": "Roadmap",
     "title": "Current &amp; Upcoming",
     "content": "For v1.0.0 . | Redeploy clean infrax &amp; document . | Rebuild S3 buckets from scratch | Redeploy serverless-iiif with overrides from scratch | Create guide for deployments &amp; updates | Look into potential subdirs for image source bucket | Update secrets names &amp; values in template repo and afiles repo | . | Document user workflows, potential collection onboarding policy . | Create docs site | Version MVP template repo | Test template repo it with docs | . | Get feedback . | From Bryan | From IIIF | From EdTech | From DSS – discuss grants? | From DLTS | . | Look into supporting IIIF Presentation v3 | . ",
     "url": "/aperitiiif/project/roadmap.html#current--upcoming",
     "relUrl": "/project/roadmap.html#current--upcoming"
-  },"17": {
+  },"20": {
     "doc": "Roadmap",
     "title": "Past",
     "content": "For v0.1.0 Released! . | Deploy serverless-iiif to NYU DSS AWS account via SAM CLI | Configure S3 bucket to hold ‘source’ images | Create template repo with sample images and workflows. | Create aperitiiif gem . | implement thor cli | use rubocop | process multi-asset items | use parallel gem for multi-thread processing | process item-level metadata | generate IIIF presentation manifest.json files | generate IIIF presentation collection.json file | generate index.html listing | generate index.json listing | write tests!! | write command to lint batch, flag issues | . | . ",
     "url": "/aperitiiif/project/roadmap.html#past",
     "relUrl": "/project/roadmap.html#past"
-  },"18": {
+  },"21": {
     "doc": "Roadmap",
     "title": "Roadmap",
     "content": " ",
     "url": "/aperitiiif/project/roadmap.html",
     "relUrl": "/project/roadmap.html"
-  },"19": {
+  },"22": {
     "doc": "Set up a batch repository",
     "title": "Set up a batch repository Work in Progress!",
     "content": " ",
     "url": "/aperitiiif/admin/set-up-a-batch-repository.html#set-up-a-batch-repository-work-in-progress",
     "relUrl": "/admin/set-up-a-batch-repository.html#set-up-a-batch-repository-work-in-progress"
-  },"20": {
+  },"23": {
     "doc": "Set up a batch repository",
     "title": "Set up a batch repository",
     "content": " ",
     "url": "/aperitiiif/admin/set-up-a-batch-repository.html",
     "relUrl": "/admin/set-up-a-batch-repository.html"
-  },"21": {
+  },"24": {
     "doc": "User Guides",
     "title": "User Guides Work in Progress!",
     "content": " ",
     "url": "/aperitiiif/user.html#user-guides-work-in-progress",
     "relUrl": "/user.html#user-guides-work-in-progress"
-  },"22": {
+  },"25": {
     "doc": "User Guides",
     "title": "User Guides",
     "content": " ",

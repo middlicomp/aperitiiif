@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th style="text-align:left">Name</th>
+    <th style="text-align:left">Type/Tool</th>
+    <th style="text-align:left">Purpose</th>
+  </tr>
+
+  {% for item in include.data %}
+  <tr>
+    <td>{{ item.name }}</td>
+    <td>{{ item.type }}</td>
+    <td>{{ item.description }}</td>
+  </tr>
+  {% endfor %}
+</table>

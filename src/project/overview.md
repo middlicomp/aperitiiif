@@ -4,10 +4,12 @@ title: Overview
 nav_order: 1
 parent: Project
 ---
+
 # Project Overview <span class="label label-purple">Work in Progress!</span>
 {: .fs-9 .no_toc }
 
 ---
+
 <details open markdown="block">
   <summary>
     Table of contents
@@ -18,30 +20,40 @@ parent: Project
 </details>
 ---
 
-## Abstract
+## Description
 
 TODO
 
-## Architecture
+## Glossary
+
+TODO
+
+## Relevant repositories
+
+-   **[aperitiiif-cli](https://github.com/nyu-dss/aperitiiif-cli)** : ruby gem for processing batches
+-   **[aperitiiif-batch-template](https://github.com/nyu-dss/aperitiiif-batch-template)** : template repository for creating batches; includes github actions workflows, gem configs, and project scaffolding.
+-   **[aperitiiif](https://github.com/nyu-dss/aperitiiif)** : documentation for the project; publishes to this site on [github pages](https://nyu-dss.github.io/aperitiiif)
+
+## Service architecture
+
+### Diagram
 
 [![diagram]({{ '/media/aperitiiif.jpg' | absolute_url }})]({{ '/media/aperitiiif.pdf' | absolute_url }})
 
-1. Canonical Metadata and Image Data  
-a. GitHub Repo
+### Scoped components (1 per batch)
 
-2. IIIF Image API  
-a. [serverless-iiif](https://github.com/samvera-labs/serverless-iiif) implementation    
-b. Source image S3 bucket  
-c. GitHub Action uses [aperitiiif gem](https://github.com/nyu-dss/aperitiiif) to process images, syncs them to S3 source bucket
+{% assign scoped = site.data.architecture | where: 'shared?', false %}
+{% include arch-table.html data=scoped %}
 
-3. IIIF Presentation API  
-a. S3 bucket for published json  
-b. GitHub Action uses [aperitiiif gem](https://github.com/nyu-dss/aperitiiif) to generate IIIF Presentation API resources, syncs them to S3 presentation bucket
+### Shared components (1 per service)
 
-4. Discovery  
-a. Github Action uses [aperitiiif gem](https://github.com/nyu-dss/aperitiiif) to generate 2 indices of resources produced (`index.html` for humans, `index.json` for machines), publishes them to Github Pages
+{% assign shared = site.data.architecture | where: 'shared?', true %}
+{% include arch-table.html data=shared %}
 
-## Workflow
+
+{% comment %}
+
+## Narrative workflow
 
 **Setup** (GitHub)
 1. Admin creates repo for new collection using `aperitiiif-batch-template` named `aperitiiif-batch-collectionname` where `collectionname` will be the namespace used for resources generated.
@@ -59,3 +71,4 @@ a. Github Action uses [aperitiiif gem](https://github.com/nyu-dss/aperitiiif) to
 **Publish (AWS)**
 1. The Presentation API resources that have been synced are done and ready. There is no additional work for AWS to do.
 2. The images synced to the S3 source image bucket are now accessible by the serverless-iiif lambda policy. Requests that hit the IIIF Image API lambdas (via Cloudfront) trigger derivative builds to an S3 cache bucket.
+{% endcomment %}

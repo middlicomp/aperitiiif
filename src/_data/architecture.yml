@@ -1,0 +1,29 @@
+
+- name: IIIF Presentation API
+  type: AWS S3 Bucket
+  description: Where the IIIF Presentation API manifests for all batches are published
+  shared?: true
+- name: IIIF Source Image API S3 Bucket
+  type: AWS S3 Bucket
+  description: Where the source images for all batches are stored (in jpg format)
+  shared?: true
+- name: Serverless-IIIF implementation
+  type: AWS Lambda
+  description: 'The "serverless" image server that produces IIIF Image API-compliant derivatives'
+  shared?: true
+- name: Organization Secrets
+  type: GitHub secrets store
+  description: Where AWS credentials are managed and stored
+  shared?: true
+- name: Batch repo
+  type: GitHub repository
+  description: Stores batch image data, metadata, and configuration
+  shared?: false
+- name: YAML Workflows
+  type: GitHub Actions
+  description: Reusable processes to lint and publish batch data
+  shared?: false
+- name: Catalog site
+  type: GitHub Pages
+  description: For graphical batch reuse & discovery
+  shared?: false

@@ -67,7 +67,7 @@
   },"11": {
     "doc": "Overview",
     "title": "Abstract",
-    "content": " ",
+    "content": "TODO . ",
     "url": "/aperitiiif/project/overview.html#abstract",
     "relUrl": "/project/overview.html#abstract"
   },"12": {
@@ -91,21 +91,21 @@
   },"15": {
     "doc": "Roadmap",
     "title": "Project Roadmap Work in Progress!",
-    "content": " ",
+    "content": ". | Current &amp; Upcoming | Past | . ",
     "url": "/aperitiiif/project/roadmap.html#project-roadmap-work-in-progress",
     "relUrl": "/project/roadmap.html#project-roadmap-work-in-progress"
   },"16": {
     "doc": "Roadmap",
-    "title": "To do",
-    "content": " ",
-    "url": "/aperitiiif/project/roadmap.html#to-do",
-    "relUrl": "/project/roadmap.html#to-do"
+    "title": "Current &amp; Upcoming",
+    "content": "For v1.0.0 . | Redeploy clean infrax &amp; document . | Rebuild S3 buckets from scratch | Redeploy serverless-iiif with overrides from scratch | Create guide for deployments &amp; updates | Look into potential subdirs for image source bucket | Update secrets names &amp; values in template repo and afiles repo | . | Document user workflows, potential collection onboarding policy . | Create docs site | Version MVP template repo | Test template repo it with docs | . | Get feedback . | From Bryan | From IIIF | From EdTech | From DSS – discuss grants? | From DLTS | . | Look into supporting IIIF Presentation v3 | . ",
+    "url": "/aperitiiif/project/roadmap.html#current--upcoming",
+    "relUrl": "/project/roadmap.html#current--upcoming"
   },"17": {
     "doc": "Roadmap",
-    "title": "Log",
-    "content": ". | Deploy serverless-iiif to NYU DSS AWS account via SAM CLI | Configure S3 bucket to hold ‘source’ images | Create template repo with sample images and workflows. | Create aperitiiif gem . | implement thor cli | use rubocop | process multi-asset items | use parallel gem for multi-thread processing | process item-level metadata | generate IIIF presentation manifest.json files | generate IIIF presentation collection.json file | generate index.html listing | generate index.json listing | write tests!! | write command to lint batch, flag issues | . | Document workflows, potential collection onboarding policy | Get feedback | . ",
-    "url": "/aperitiiif/project/roadmap.html#log",
-    "relUrl": "/project/roadmap.html#log"
+    "title": "Past",
+    "content": "For v0.1.0 Released! . | Deploy serverless-iiif to NYU DSS AWS account via SAM CLI | Configure S3 bucket to hold ‘source’ images | Create template repo with sample images and workflows. | Create aperitiiif gem . | implement thor cli | use rubocop | process multi-asset items | use parallel gem for multi-thread processing | process item-level metadata | generate IIIF presentation manifest.json files | generate IIIF presentation collection.json file | generate index.html listing | generate index.json listing | write tests!! | write command to lint batch, flag issues | . | . ",
+    "url": "/aperitiiif/project/roadmap.html#past",
+    "relUrl": "/project/roadmap.html#past"
   },"18": {
     "doc": "Roadmap",
     "title": "Roadmap",

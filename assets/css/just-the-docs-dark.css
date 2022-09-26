@@ -1544,4 +1544,26 @@ a.skip-to-main:focus, a.skip-to-main:active { color: #2c84fa; background-color: 
 
 div.opaque { background-color: #27262b; }
 
+p.note, blockquote.note { background: rgba(56, 24, 133, 0.2); border-left: 4px solid #7253ed; border-radius: 4px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08); padding: .8rem; }
+
+p.note::before, blockquote.note::before { color: #7253ed; content: "Note"; display: block; font-weight: bold; text-transform: uppercase; font-size: .75em; padding-bottom: .125rem; }
+
+p.note > .note-title, blockquote.note > .note-title { color: #7253ed; display: block; font-weight: bold; text-transform: uppercase; font-size: .75em; padding-bottom: .125rem; }
+
+p.note-title, blockquote.note-title { background: rgba(56, 24, 133, 0.2); border-left: 4px solid #7253ed; border-radius: 4px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08); padding: .8rem; }
+
+p.note-title > p:first-child, blockquote.note-title > p:first-child { margin-top: 0; margin-bottom: 0; color: #7253ed; display: block; font-weight: bold; text-transform: uppercase; font-size: .75em; padding-bottom: .125rem; }
+
+blockquote.note { margin-left: 0; margin-right: 0; }
+
+blockquote.note > p:first-child { margin-top: 0; }
+
+blockquote.note > p:last-child { margin-bottom: 0; }
+
+blockquote.note-title { margin-left: 0; margin-right: 0; }
+
+blockquote.note-title > p:nth-child(2) { margin-top: 0; }
+
+blockquote.note-title > p:last-child { margin-bottom: 0; }
+
 /*# sourceMappingURL=just-the-docs-dark.css.map */

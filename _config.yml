@@ -10,3 +10,7 @@ aux_links_new_tab:  true
 aux_links:
   GitHub:
     - 'https://github.com/nyu-dss/aperitiiif'
+callouts:
+  note:
+    title: Note
+    color: purple

@@ -15,9 +15,8 @@ parent: Craft a Batch
 ## Steps
 
 1. Open the file `config.yml`. It should look something like this:
-    ``` yaml
-    # batch config
 
+    ``` yaml
     label:          'Rijksmuseum Demo'
     description:    'Demo collection for aperitiiif service'
     attribution:    'Provided by Rijksmuseum via Wikimedia Commons'
@@ -31,6 +30,7 @@ parent: Craft a Batch
         logo: 'https://upload.wikimedia.org/wikipedia/commons/6/67/Rijks_museum_logo.png'
         source: 'https://commons.wikimedia.org/wiki/Category:Prints_by_Katsukawa_Shunsh%C5%8D_in_the_Rijksmuseum_Amsterdam'
     ```
+    
 2. Update the `label`, `description`, and `attribution` fields with the new batch's information. Note: this is for the batch as a whole!
 3. Keep `presentation_api_url` and `image_api_url` as is.
 4. Keep `records` `file` as is.

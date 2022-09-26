@@ -2,9 +2,10 @@
 layout: page
 title: Roadmap
 nav_order: 2
-parent: Project
+parent: About
 ---
-# Project Roadmap <span class="label label-purple">Work in Progress!</span>
+
+# {{ page.title }} <span class="label label-purple">Work in Progress!</span>
 {: .fs-9 .no_toc }
 
 ---

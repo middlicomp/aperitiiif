@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Admin Guides
-nav_order: 2
+nav_order: 3
 has_children: true
 ---
 # {{ page.title }} <span class="label label-purple">Work in Progress!</span>

@@ -2,10 +2,10 @@
 layout: page
 title: Overview
 nav_order: 1
-parent: Project
+parent: About
 ---
 
-# Project Overview <span class="label label-purple">Work in Progress!</span>
+# {{ page.title }} <span class="label label-purple">Work in Progress!</span>
 {: .fs-9 .no_toc }
 
 ---
@@ -43,12 +43,12 @@ TODO
 ### Scoped components (1 per batch)
 
 {% assign scoped = site.data.architecture | where: 'shared?', false %}
-{% include arch-table.html data=scoped %}
+{% include arch_table.html data=scoped %}
 
 ### Shared components (1 per service)
 
 {% assign shared = site.data.architecture | where: 'shared?', true %}
-{% include arch-table.html data=shared %}
+{% include arch_table.html data=shared %}
 
 
 {% comment %}

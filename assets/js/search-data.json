@@ -253,13 +253,13 @@
   },"42": {
     "doc": "5: Publish the batch!",
     "title": "Role Admin",
-    "content": " ",
+    "content": ". | The user following these guides should be an NYU DSS staff member who has access to the batch repo’s settings. | They shouldn’t need access to the GitHub organization’s settings. | . ",
     "url": "/aperitiiif/craft/publish-the-batch.html#role-admin",
     "relUrl": "/craft/publish-the-batch.html#role-admin"
   },"43": {
     "doc": "5: Publish the batch!",
     "title": "Steps",
-    "content": "TO DO . ",
+    "content": ". | Make sure GitHub Actions are enabled on the batch repository and trigger the actions to run. You can do this manually in the Actions GUI or by making a small temporary commit (like adding an empty test.txt file to the repo.) | Make sure the Lint and Deploy actions pass. When the Deploy action is finished, it will have published: . | the batch images to one AWS S3 bucket | the completed IIIF manifests to another S3 bucket, and | a small catalog site to the gh-pages branch of the repo. (See the Service Architecture) | . The secret AWS keys needed for the Deploy action should already be configured in the NYU DSS GitHub organization and will be inherited automatically by the batch repo. If the Deploy action shows errors looking for secret environment variables, read the Manage secrets and env vars page to troubleshoot. | Enable GitHub Pages on the batch repo with the following settings. | Source: Deploy from branch | Branch: gh-pages /(root) | . | The step above will trigger a new GitHub Action to publish the catalog site to https://nyu-dss.github.io/aperitiiif-batch-CHANGEME (where CHANGEME is your new batch namespace) . | Browse the catalog site to make sure all the IIIF images and manifests are working as expected. | . FIN 🎉 . ",
     "url": "/aperitiiif/craft/publish-the-batch.html#steps",
     "relUrl": "/craft/publish-the-batch.html#steps"
   },"44": {

@@ -1566,4 +1566,26 @@ blockquote.note-title > p:nth-child(2) { margin-top: 0; }
 
 blockquote.note-title > p:last-child { margin-bottom: 0; }
 
+p.optional, blockquote.optional { background: rgba(2, 110, 87, 0.2); border-left: 4px solid #41d693; border-radius: 4px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08); padding: .8rem; }
+
+p.optional::before, blockquote.optional::before { color: #41d693; content: "Optional"; display: block; font-weight: bold; text-transform: uppercase; font-size: .75em; padding-bottom: .125rem; }
+
+p.optional > .optional-title, blockquote.optional > .optional-title { color: #41d693; display: block; font-weight: bold; text-transform: uppercase; font-size: .75em; padding-bottom: .125rem; }
+
+p.optional-title, blockquote.optional-title { background: rgba(2, 110, 87, 0.2); border-left: 4px solid #41d693; border-radius: 4px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08); padding: .8rem; }
+
+p.optional-title > p:first-child, blockquote.optional-title > p:first-child { margin-top: 0; margin-bottom: 0; color: #41d693; display: block; font-weight: bold; text-transform: uppercase; font-size: .75em; padding-bottom: .125rem; }
+
+blockquote.optional { margin-left: 0; margin-right: 0; }
+
+blockquote.optional > p:first-child { margin-top: 0; }
+
+blockquote.optional > p:last-child { margin-bottom: 0; }
+
+blockquote.optional-title { margin-left: 0; margin-right: 0; }
+
+blockquote.optional-title > p:nth-child(2) { margin-top: 0; }
+
+blockquote.optional-title > p:last-child { margin-bottom: 0; }
+
 /*# sourceMappingURL=just-the-docs-default.css.map */

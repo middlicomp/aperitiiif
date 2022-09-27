@@ -13,7 +13,7 @@
   },"2": {
     "doc": "4: Add batch data to the repository",
     "title": "Steps",
-    "content": "TO DO . ",
+    "content": ". | Clone the batch repository created in tutorial 0: Set up the batch repository . git clone git@github.com:nyu-dss/aperitiiif-batch-CHANGEME.git . | In your cloned copy, open the src folder and delete the data folder and records.csv file. | Copy the new data folder and records.csv you created in tutorials 2 and 3 into the repository’s src directory. If you have a local Ruby development environment set up, you can test the batch locally at this point before committing the changes. For instructions, see Using the aperitiiif cli. | Add, commit, and push the changes to GitHub . git add . git commit -m 'init batch data' git push . | . ",
     "url": "/aperitiiif/craft/add-batch-data-to-the-repo.html#steps",
     "relUrl": "/craft/add-batch-data-to-the-repo.html#steps"
   },"3": {
@@ -316,5 +316,29 @@
     "content": " ",
     "url": "/aperitiiif/craft/set-up-batch-repository.html",
     "relUrl": "/craft/set-up-batch-repository.html"
+  },"53": {
+    "doc": "Use the aperitiiif cli",
+    "title": "Use the aperitiiif cli Work in Progress!",
+    "content": " ",
+    "url": "/aperitiiif/admin/use-aperitiiif-cli.html#use-the-aperitiiif-cli-work-in-progress",
+    "relUrl": "/admin/use-aperitiiif-cli.html#use-the-aperitiiif-cli-work-in-progress"
+  },"54": {
+    "doc": "Use the aperitiiif cli",
+    "title": "Role Admin",
+    "content": " ",
+    "url": "/aperitiiif/admin/use-aperitiiif-cli.html#role-admin",
+    "relUrl": "/admin/use-aperitiiif-cli.html#role-admin"
+  },"55": {
+    "doc": "Use the aperitiiif cli",
+    "title": "Steps",
+    "content": "TO DO . ",
+    "url": "/aperitiiif/admin/use-aperitiiif-cli.html#steps",
+    "relUrl": "/admin/use-aperitiiif-cli.html#steps"
+  },"56": {
+    "doc": "Use the aperitiiif cli",
+    "title": "Use the aperitiiif cli",
+    "content": " ",
+    "url": "/aperitiiif/admin/use-aperitiiif-cli.html",
+    "relUrl": "/admin/use-aperitiiif-cli.html"
   }
 }

@@ -25,8 +25,8 @@ parent: About
 {: .no_toc }
 
 - [ ] Redeploy clean infrax & document
-  - [ ] Rebuild S3 buckets from scratch
-  - [ ] Redeploy serverless-iiif with overrides from scratch
+  - [x] Rebuild S3 buckets from scratch
+  - [x] Redeploy serverless-iiif with overrides from scratch
   - [ ] Create guide for deployments & updates
   - [ ] Look into potential subdirs for image source bucket
   - [ ] Update secrets names & values in template repo and afiles repo

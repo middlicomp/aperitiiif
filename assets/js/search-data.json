@@ -277,7 +277,7 @@
   },"46": {
     "doc": "Roadmap",
     "title": "Current &amp; Upcoming",
-    "content": "For v1.0.0 . | Redeploy clean infrax &amp; document . | Rebuild S3 buckets from scratch | Redeploy serverless-iiif with overrides from scratch | Create guide for deployments &amp; updates | Look into potential subdirs for image source bucket | Update secrets names &amp; values in template repo and afiles repo | . | Document user workflows, potential collection onboarding policy . | Create docs site | Version MVP template repo | Test template repo it with docs | . | Get feedback . | From Bryan | From IIIF | From EdTech | From DSS – discuss grants? | From DLTS | . | Look into supporting IIIF Presentation v3 | . ",
+    "content": "For v1.0.0 . | Redeploy clean infrax &amp; document . | Rebuild S3 buckets from scratch | Redeploy serverless-iiif with overrides from scratch | Create guide for deployments &amp; updates (convert from log) | Look into potential subdirs for image source bucket | Update secrets names &amp; values in template repo and afiles repo | . | Document user workflows, potential collection onboarding policy . | Create docs site | Version MVP template repo | Test template repo with docs | . | Get feedback . | From Bryan | From IIIF | From EdTech | From DSS – discuss grants? | From DLTS | . | Look into supporting IIIF Presentation v3 | . ",
     "url": "/aperitiiif/about/roadmap.html#current--upcoming",
     "relUrl": "/about/roadmap.html#current--upcoming"
   },"47": {

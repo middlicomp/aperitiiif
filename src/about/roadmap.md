@@ -27,13 +27,13 @@ parent: About
 - [ ] Redeploy clean infrax & document
   - [x] Rebuild S3 buckets from scratch
   - [x] Redeploy serverless-iiif with overrides from scratch
-  - [ ] Create guide for deployments & updates
+  - [ ] Create guide for deployments & updates (convert from [log](https://gist.github.com/mnyrop/e258ab03c6135a4c6645b20142674ab5))
   - [ ] Look into potential subdirs for image source bucket
-  - [ ] Update secrets names & values in template repo and afiles repo
+  - [x] Update secrets names & values in template repo and afiles repo
 - [ ] Document user workflows, potential collection onboarding policy
   - [x] Create docs site
   - [x] Version MVP template repo
-  - [ ] Test template repo it with docs
+  - [x] Test template repo with docs
 - [ ] Get feedback
   - [ ] From Bryan
   - [ ] From IIIF

@@ -174,10 +174,10 @@
     "relUrl": "/get-started.html"
   },"29": {
     "doc": "About",
-    "title": "nyu-dss/aperitiiif 🥂 Work in Progress!",
-    "content": "Small(ish) batch IIIF processing for digital research and scholarship. Leverages Serverless-IIIF, AWS, and GitHub. ",
-    "url": "/aperitiiif/#nyu-dssaperitiiif--work-in-progress",
-    "relUrl": "/#nyu-dssaperitiiif--work-in-progress"
+    "title": "Aperitiiif 🥂 Work in Progress!",
+    "content": "Craft batch publishing with serverless IIIF for digital research and scholarship. Aperitiiif is a workflow and set of components for batch publishing IIIF-compliant image collections. It addresses the needs of research and scholarly collections—needs often distinct from collections formally acquired and stewarded by research institutions. Aperitiiif leverages a multi-tenant serverless-iiif implementation on AWS. “Batches” (i.e., discrete research collections) are managed via GitHub repos. GitHub handles all of the scoped user auth, GitHub Actions workflows create the IIIF manifests and deploy the generated resources to AWS, and GitHub Pages hosts an automated catalog site to present items for reuse. This architecture enables flexible user contributions with lower overhead for financial cost and technical maintenance. ",
+    "url": "/aperitiiif/#aperitiiif--work-in-progress",
+    "relUrl": "/#aperitiiif--work-in-progress"
   },"30": {
     "doc": "About",
     "title": "About",
@@ -211,130 +211,124 @@
   },"35": {
     "doc": "Overview",
     "title": "Overview Work in Progress!",
-    "content": ". | Description | Glossary | Relevant repositories | Service architecture . | Diagram | Scoped components (1 per batch) | Shared components (1 per service) | . | . ",
+    "content": ". | Glossary | Relevant repositories | Service architecture . | Diagram | Scoped components (1 per batch) | Shared components (1 per service) | . | . ",
     "url": "/aperitiiif/about/overview.html#overview-work-in-progress",
     "relUrl": "/about/overview.html#overview-work-in-progress"
   },"36": {
     "doc": "Overview",
-    "title": "Description",
-    "content": "Aperitiiif is a workflow and set of components for batch publishing IIIF-compliant image collections. It addresses the needs of research and scholarly collections, which are often distinct from those of collections formally held and stewarded by research libraries, museums, archives, and other institutions. Aperitiif leverages a multi-tenant Serverless-IIIF implementation on AWS. “Batches” (aka discrete research collections or workshop demo data) are managed via GitHub repos, where GitHub handles all of the scoped user auth, GitHub Actions creates the manifests and deploys everything to AWS, and GitHub pages hosts an automated catalog site. This enables flexible user contributions with relatively low cost, low maintenance overhead. ",
-    "url": "/aperitiiif/about/overview.html#description",
-    "relUrl": "/about/overview.html#description"
-  },"37": {
-    "doc": "Overview",
     "title": "Glossary",
-    "content": "TODO . ",
+    "content": "| IIIF Manifest | The primary unit for IIIF: a JSON file that bundles metadata with item structure to allow frictionless re-use. | . | Batch | A discrete collection of image-based items that are similar enough to be described in a single spreadsheet. | . | Item | A single IIIF thing (e.g., a book, front and back of a poster, a scanned photograph). An item can comprise many image assets. | . | Asset | A single image file (e.g., .jpg, .tif) belonging to an item. | . | Record | Metadata for a single item (not collection-wide, not asset-specific). Processed as a single spreadsheet row. | . ",
     "url": "/aperitiiif/about/overview.html#glossary",
     "relUrl": "/about/overview.html#glossary"
-  },"38": {
+  },"37": {
     "doc": "Overview",
     "title": "Relevant repositories",
     "content": ". | aperitiiif-cli : ruby gem for processing batches | aperitiiif-batch-template : template repository for creating batches; includes github actions workflows, gem configs, and project scaffolding. | aperitiiif : documentation for the project; publishes to this site on github pages | . ",
     "url": "/aperitiiif/about/overview.html#relevant-repositories",
     "relUrl": "/about/overview.html#relevant-repositories"
-  },"39": {
+  },"38": {
     "doc": "Overview",
     "title": "Service architecture",
     "content": "Diagram . Scoped components (1 per batch) . | Name | Type/Tool | Purpose | . | Batch repo | GitHub repository | Stores batch image data, metadata, and configuration | . | YAML Workflows | GitHub Actions | Reusable processes to lint and publish batch data | . | Catalog site | GitHub Pages | For graphical batch reuse &amp; discovery | . Shared components (1 per service) . | Name | Type/Tool | Purpose | . | IIIF Presentation API | AWS S3 Bucket | Where the IIIF Presentation API manifests for all batches are published | . | IIIF Source Image API S3 Bucket | AWS S3 Bucket | Where the source images for all batches are stored (in jpg format) | . | Serverless-IIIF implementation | AWS Lambda | The \"serverless\" image server that produces IIIF Image API-compliant derivatives | . | Organization Secrets | GitHub secrets store | Where AWS credentials are managed and stored | . ",
     "url": "/aperitiiif/about/overview.html#service-architecture",
     "relUrl": "/about/overview.html#service-architecture"
-  },"40": {
+  },"39": {
     "doc": "Overview",
     "title": "Overview",
     "content": " ",
     "url": "/aperitiiif/about/overview.html",
     "relUrl": "/about/overview.html"
-  },"41": {
+  },"40": {
     "doc": "5: Publish the batch!",
     "title": "5: Publish the batch! Work in Progress!",
     "content": " ",
     "url": "/aperitiiif/craft/publish-the-batch.html#5-publish-the-batch-work-in-progress",
     "relUrl": "/craft/publish-the-batch.html#5-publish-the-batch-work-in-progress"
-  },"42": {
+  },"41": {
     "doc": "5: Publish the batch!",
     "title": "Role Admin",
     "content": ". | The user following these guides should be an NYU DSS staff member who has access to the batch repo’s settings. | They shouldn’t need access to the GitHub organization’s settings. | . ",
     "url": "/aperitiiif/craft/publish-the-batch.html#role-admin",
     "relUrl": "/craft/publish-the-batch.html#role-admin"
-  },"43": {
+  },"42": {
     "doc": "5: Publish the batch!",
     "title": "Steps",
     "content": ". | Make sure GitHub Actions are enabled on the batch repository and trigger the actions to run. You can do this manually in the Actions GUI or by making a small temporary commit (like adding an empty test.txt file to the repo.) | Make sure the Lint and Deploy actions pass. When the Deploy action is finished, it will have published: . | the batch images to one AWS S3 bucket | the completed IIIF manifests to another S3 bucket, and | a small catalog site to the gh-pages branch of the repo. (See the Service Architecture) | . The secret AWS keys needed for the Deploy action should already be configured in the NYU DSS GitHub organization and will be inherited automatically by the batch repo. If the Deploy action shows errors looking for secret environment variables, read the Manage secrets and env vars page to troubleshoot. | Enable GitHub Pages on the batch repo with the following settings. | Source: Deploy from branch | Branch: gh-pages /(root) | . | The step above will trigger a new GitHub Action to publish the catalog site to https://nyu-dss.github.io/aperitiiif-batch-CHANGEME (where CHANGEME is your new batch namespace) . | Browse the catalog site to make sure all the IIIF images and manifests are working as expected. | . FIN 🎉 . ",
     "url": "/aperitiiif/craft/publish-the-batch.html#steps",
     "relUrl": "/craft/publish-the-batch.html#steps"
-  },"44": {
+  },"43": {
     "doc": "5: Publish the batch!",
     "title": "5: Publish the batch!",
     "content": " ",
     "url": "/aperitiiif/craft/publish-the-batch.html",
     "relUrl": "/craft/publish-the-batch.html"
-  },"45": {
+  },"44": {
     "doc": "Roadmap",
     "title": "Roadmap Work in Progress!",
     "content": ". | Current &amp; Upcoming | Past | . ",
     "url": "/aperitiiif/about/roadmap.html#roadmap-work-in-progress",
     "relUrl": "/about/roadmap.html#roadmap-work-in-progress"
-  },"46": {
+  },"45": {
     "doc": "Roadmap",
     "title": "Current &amp; Upcoming",
     "content": "For v1.0.0 . | Redeploy clean infrax &amp; document . | Rebuild S3 buckets from scratch | Redeploy serverless-iiif with overrides from scratch | Create guide for deployments &amp; updates (convert from log) | Look into potential subdirs for image source bucket | Update secrets names &amp; values in template repo and afiles repo | . | Document user workflows, potential collection onboarding policy . | Create docs site | Version MVP template repo | Test template repo with docs | . | Get feedback . | From Bryan | From IIIF | From EdTech | From DSS – discuss grants? | From DLTS | . | Look into supporting IIIF Presentation v3 | . ",
     "url": "/aperitiiif/about/roadmap.html#current--upcoming",
     "relUrl": "/about/roadmap.html#current--upcoming"
-  },"47": {
+  },"46": {
     "doc": "Roadmap",
     "title": "Past",
     "content": "For v0.1.0 Released! . | Deploy serverless-iiif to NYU DSS AWS account via SAM CLI | Configure S3 bucket to hold ‘source’ images | Create template repo with sample images and workflows. | Create aperitiiif gem . | implement thor cli | use rubocop | process multi-asset items | use parallel gem for multi-thread processing | process item-level metadata | generate IIIF presentation manifest.json files | generate IIIF presentation collection.json file | generate index.html listing | generate index.json listing | write tests!! | write command to lint batch, flag issues | . | . ",
     "url": "/aperitiiif/about/roadmap.html#past",
     "relUrl": "/about/roadmap.html#past"
-  },"48": {
+  },"47": {
     "doc": "Roadmap",
     "title": "Roadmap",
     "content": " ",
     "url": "/aperitiiif/about/roadmap.html",
     "relUrl": "/about/roadmap.html"
-  },"49": {
+  },"48": {
     "doc": "0: Set up the batch repository",
     "title": "0: Set up the batch repository Work in Progress!",
     "content": " ",
     "url": "/aperitiiif/craft/set-up-batch-repository.html#0-set-up-the-batch-repository-work-in-progress",
     "relUrl": "/craft/set-up-batch-repository.html#0-set-up-the-batch-repository-work-in-progress"
-  },"50": {
+  },"49": {
     "doc": "0: Set up the batch repository",
     "title": "Role Admin",
     "content": ". | The user following these initial setup steps must have user permissions to create a new repository in the nyu-dss GitHub organization. | They also should have access to repository settings. | . ",
     "url": "/aperitiiif/craft/set-up-batch-repository.html#role-admin",
     "relUrl": "/craft/set-up-batch-repository.html#role-admin"
-  },"51": {
+  },"50": {
     "doc": "0: Set up the batch repository",
     "title": "Steps",
     "content": ". | Go to the nyu-dss/aperitiiif-batch-template and click “Use this template.” . | Follow the instructions on GitHub to make the new repository with these settings: . | The owner must be nyu-dss | The repository name must be aperitiiif-batch-CHANGEME, where CHANGEME will serve as the unique namespace for the entire batch. Choose wisely! | The repository must be Public | . | When the new repository has been created . | Delete the README.md file | Rename the README-template.md to README.md | Change all of the instances of CHANGEME in the new README.md file to the batch namespace you chose in step 2. | Fill out the remaining info in the new README.md | . | Add the batch contributors (if applicable) as GitHub contributors to the repository. They will need write access but do not need admin access to any repo settings. | . ",
     "url": "/aperitiiif/craft/set-up-batch-repository.html#steps",
     "relUrl": "/craft/set-up-batch-repository.html#steps"
-  },"52": {
+  },"51": {
     "doc": "0: Set up the batch repository",
     "title": "0: Set up the batch repository",
     "content": " ",
     "url": "/aperitiiif/craft/set-up-batch-repository.html",
     "relUrl": "/craft/set-up-batch-repository.html"
-  },"53": {
+  },"52": {
     "doc": "Use the aperitiiif cli",
     "title": "Use the aperitiiif cli Work in Progress!",
     "content": " ",
     "url": "/aperitiiif/admin/use-aperitiiif-cli.html#use-the-aperitiiif-cli-work-in-progress",
     "relUrl": "/admin/use-aperitiiif-cli.html#use-the-aperitiiif-cli-work-in-progress"
-  },"54": {
+  },"53": {
     "doc": "Use the aperitiiif cli",
     "title": "Role Admin",
     "content": " ",
     "url": "/aperitiiif/admin/use-aperitiiif-cli.html#role-admin",
     "relUrl": "/admin/use-aperitiiif-cli.html#role-admin"
-  },"55": {
+  },"54": {
     "doc": "Use the aperitiiif cli",
     "title": "Steps",
     "content": "TO DO . ",
     "url": "/aperitiiif/admin/use-aperitiiif-cli.html#steps",
     "relUrl": "/admin/use-aperitiiif-cli.html#steps"
-  },"56": {
+  },"55": {
     "doc": "Use the aperitiiif cli",
     "title": "Use the aperitiiif cli",
     "content": " ",

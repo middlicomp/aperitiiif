@@ -1,0 +1,19 @@
+- term: IIIF Manifest
+  definition: |
+    The primary unit for IIIF: a JSON file that bundles metadata
+    with item structure to allow frictionless re-use.
+- term: Batch
+  definition: |
+    A discrete collection of image-based items that are similar
+    enough to be described in a single spreadsheet.
+- term: Item
+  definition: |
+    A single IIIF _thing_ (e.g., a book, front and back of a poster,
+    a scanned photograph). An item can comprise many image assets.
+- term: Asset
+  definition: |
+    A single image file (e.g., .jpg, .tif) belonging to an item.
+- term: Record
+  definition: |
+    Metadata for a single item (not collection-wide,
+    not asset-specific). Processed as a single spreadsheet row.

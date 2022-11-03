@@ -1,0 +1,9 @@
+<table>
+
+  {% for item in site.data.glossary %}
+  <tr>
+    <td>{{ item.term }}</td>
+    <td>{{ item.definition | markdownify }}</td>
+  </tr>
+  {% endfor %}
+</table>

@@ -20,15 +20,9 @@ parent: About
 </details>
 ---
 
-## Description
-
-Aperitiiif is a workflow and set of components for batch publishing IIIF-compliant image collections. It addresses the needs of research and scholarly collections, which are often distinct from those of collections formally held and stewarded by research libraries, museums, archives, and other institutions.
-
-Aperitiif leverages a multi-tenant Serverless-IIIF implementation on AWS. "Batches" (aka discrete research collections or workshop demo data) are managed via GitHub repos, where GitHub handles all of the scoped user auth,  GitHub Actions creates the manifests and deploys everything to AWS, and GitHub pages hosts an automated catalog site. This enables flexible user contributions with relatively low cost, low maintenance overhead.
-
 ## Glossary
 
-TODO
+{% include glossary.html %}
 
 ## Relevant repositories
 

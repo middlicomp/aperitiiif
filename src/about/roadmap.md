@@ -28,19 +28,24 @@ parent: About
   - [x] Rebuild S3 buckets from scratch
   - [x] Redeploy serverless-iiif with overrides from scratch
   - [ ] Create guide for deployments & updates (convert from [log](https://gist.github.com/mnyrop/e258ab03c6135a4c6645b20142674ab5))
-  - [ ] Look into potential subdirs for image source bucket
   - [x] Update secrets names & values in template repo and afiles repo
-- [ ] Document user workflows, potential collection onboarding policy
+- [x] Document user workflows, potential collection onboarding policy
   - [x] Create docs site
   - [x] Version MVP template repo
   - [x] Test template repo with docs
-- [ ] Get feedback
-  - [ ] From Bryan
-  - [ ] From IIIF
-  - [ ] From EdTech
-  - [ ] From DSS – discuss grants?
-  - [ ] From DLTS
-- [ ] Look into supporting IIIF Presentation v3
+- [x] Get feedback
+  - [x] From Bryan
+  - [x] From IIIF-C
+  - [x] From EdTech
+  - [x] From ISAW
+  - [x] From DLTS/DRSR
+- [ ] Management + policy scan
+  - [ ] Look into potential subdirs for image source bucket
+  - [ ] Look into options for cost sharing, chartfield routing(?)
+- [ ] Future features
+  - [ ] Look into supporting IIIF Presentation v3
+  - [ ] Manifest validation
+
 
 ## Past
 

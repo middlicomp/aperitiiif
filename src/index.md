@@ -5,7 +5,7 @@ nav_order: 1
 has_children: true
 ---
 
-# Aperitiiif 🥂 <span class="label label-purple">Work in Progress!</span>
+# Aperitiiif <span class="label label-purple">Work in Progress!</span>
 {: .fs-9 }
 
 Craft batch publishing with serverless IIIF for digital research and scholarship.

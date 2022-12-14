@@ -26,9 +26,9 @@ parent: About
 
 ## Relevant repositories
 
--   **[aperitiiif-cli](https://github.com/nyu-dss/aperitiiif-cli)** : ruby gem for processing batches
--   **[aperitiiif-batch-template](https://github.com/nyu-dss/aperitiiif-batch-template)** : template repository for creating batches; includes github actions workflows, gem configs, and project scaffolding.
--   **[aperitiiif](https://github.com/nyu-dss/aperitiiif)** : documentation for the project; publishes to this site on [github pages](https://nyu-dss.github.io/aperitiiif)
+- **[aperitiiif-cli](https://githumiddlicomp/aperitiiif-cli)** : ruby gem for processing batches
+- **[aperitiiif-batch-template](https://github.com/middlicomp/aperitiiif-batch-template)** : template repository for creating batches; includes github actions workflows, gem configs, and project scaffolding.
+- **[aperitiiif](https://github.com/middlicomp/aperitiiif)** : documentation for the project; publishes to this site on [github pages](https://middlicomp.github.io/aperitiiif)
 
 ## Service architecture
 
@@ -46,18 +46,19 @@ parent: About
 {% assign shared = site.data.architecture | where: 'shared?', true %}
 {% include arch_table.html data=shared %}
 
-
 {% comment %}
 
 ## Narrative workflow
 
 **Setup** (GitHub)
+
 1. Admin creates repo for new collection using `aperitiiif-batch-template` named `aperitiiif-batch-collectionname` where `collectionname` will be the namespace used for resources generated.
 2. Admin adds S3 secrets to the repo enviroment.
 3. Admin enables Actions and GitHub pages on the repo.
-4. Admin gives curator(s) write access to the repo. They can add images and metadata but cannot access settings or secrets.  
+4. Admin gives curator(s) write access to the repo. They can add images and metadata but cannot access settings or secrets.
 
-**Ingest (GitHub)**  
+**Ingest (GitHub)**
+
 1. Curator adds images to `src/data` directory (multipart object structure TBD) and metadata via CSV file to `src/metadata`.
 2. Curator adds metadata defaults as needed to the `config.yml` file
 3. When committed to the `main` branch, a GitHub Action will convert images to tif, namespace them by prepending the collection name and any subfolder names, and sync them to the S3 source image bucket.
@@ -65,6 +66,7 @@ parent: About
 5. Lastly, it will also create listings of resources published (html and json) and deploy them to GitHub pages.
 
 **Publish (AWS)**
+
 1. The Presentation API resources that have been synced are done and ready. There is no additional work for AWS to do.
 2. The images synced to the S3 source image bucket are now accessible by the serverless-iiif lambda policy. Requests that hit the IIIF Image API lambdas (via Cloudfront) trigger derivative builds to an S3 cache bucket.
-{% endcomment %}
+   {% endcomment %}

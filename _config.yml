@@ -1,15 +1,14 @@
-
-title:        Aperitiiif
-baseurl:      /aperitiiif
-url:          ''
-source:       src
-theme:        just-the-docs
+title: Aperitiiif 🥂
+baseurl: /aperitiiif
+url: ""
+source: src
+theme: just-the-docs
 color_scheme: dark
 
-aux_links_new_tab:  true
+aux_links_new_tab: true
 aux_links:
   GitHub:
-    - 'https://github.com/nyu-dss/aperitiiif'
+    - "https://github.com/middlicomp/aperitiiif"
 callouts:
   note:
     title: Note

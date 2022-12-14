@@ -13,7 +13,7 @@
   },"2": {
     "doc": "4: Add batch data to the repository",
     "title": "Steps",
-    "content": ". | Clone the batch repository created in tutorial 0: Set up the batch repository . git clone git@github.com:nyu-dss/aperitiiif-batch-CHANGEME.git . | In your cloned copy, open the src folder and delete the data folder and records.csv file. | Copy the new data folder and records.csv you created in tutorials 2 and 3 into the repository’s src directory. If you have a local Ruby development environment set up, you can test the batch locally at this point before committing the changes. For instructions, see Using the aperitiiif cli. | Add, commit, and push the changes to GitHub . git add . git commit -m 'init batch data' git push . | . ",
+    "content": ". | Clone the batch repository created in tutorial 0: Set up the batch repository . git clone git@github.com:middlicomp/aperitiiif-batch-CHANGEME.git . | In your cloned copy, open the src folder and delete the data folder and records.csv file. | Copy the new data folder and records.csv you created in tutorials 2 and 3 into the repository’s src directory. If you have a local Ruby development environment set up, you can test the batch locally at this point before committing the changes. For instructions, see Using the aperitiiif cli. | Add, commit, and push the changes to GitHub . git add . git commit -m 'init batch data' git push . | . ",
     "url": "/aperitiiif/craft/add-batch-data-to-the-repo.html#steps",
     "relUrl": "/craft/add-batch-data-to-the-repo.html#steps"
   },"3": {
@@ -168,10 +168,10 @@
     "relUrl": "/get-started.html"
   },"28": {
     "doc": "About",
-    "title": "Aperitiiif 🥂 Work in Progress!",
+    "title": "Aperitiiif Work in Progress!",
     "content": "Craft batch publishing with serverless IIIF for digital research and scholarship. Aperitiiif is a workflow and set of components for batch publishing IIIF-compliant image collections. It addresses the needs of research and scholarly collections—needs often distinct from collections formally acquired and stewarded by research institutions. Aperitiiif leverages a multi-tenant serverless-iiif implementation on AWS. “Batches” (i.e., discrete research collections) are managed via GitHub repos. GitHub handles all of the scoped user auth, GitHub Actions workflows create the IIIF manifests and deploy the generated resources to AWS, and GitHub Pages hosts an automated catalog site to present items for reuse. This architecture enables flexible user contributions with lower overhead for financial cost and technical maintenance. ",
-    "url": "/aperitiiif/#aperitiiif--work-in-progress",
-    "relUrl": "/#aperitiiif--work-in-progress"
+    "url": "/aperitiiif/#aperitiiif-work-in-progress",
+    "relUrl": "/#aperitiiif-work-in-progress"
   },"29": {
     "doc": "About",
     "title": "About",
@@ -247,7 +247,7 @@
   },"41": {
     "doc": "5: Publish the batch!",
     "title": "Steps",
-    "content": ". | Make sure GitHub Actions are enabled on the batch repository and trigger the actions to run. You can do this manually in the Actions GUI or by making a small temporary commit (like adding an empty test.txt file to the repo.) | Make sure the Lint and Deploy actions pass. When the Deploy action is finished, it will have published: . | the batch images to one AWS S3 bucket | the completed IIIF manifests to another S3 bucket, and | a small catalog site to the gh-pages branch of the repo. (See the Service Architecture) | . The secret AWS keys needed for the Deploy action should already be configured in the NYU DSS GitHub organization and will be inherited automatically by the batch repo. If the Deploy action shows errors looking for secret environment variables, read the Manage secrets and env vars page to troubleshoot. | Enable GitHub Pages on the batch repo with the following settings. | Source: Deploy from branch | Branch: gh-pages /(root) | . | The step above will trigger a new GitHub Action to publish the catalog site to https://nyu-dss.github.io/aperitiiif-batch-CHANGEME (where CHANGEME is your new batch namespace) . | Browse the catalog site to make sure all the IIIF images and manifests are working as expected. | . FIN 🎉 . ",
+    "content": ". | Make sure GitHub Actions are enabled on the batch repository and trigger the actions to run. You can do this manually in the Actions GUI or by making a small temporary commit (like adding an empty test.txt file to the repo.) | Make sure the Lint and Deploy actions pass. When the Deploy action is finished, it will have published: . | the batch images to one AWS S3 bucket | the completed IIIF manifests to another S3 bucket, and | a small catalog site to the gh-pages branch of the repo. (See the Service Architecture) | . The secret AWS keys needed for the Deploy action should already be configured in the NYU DSS GitHub organization and will be inherited automatically by the batch repo. If the Deploy action shows errors looking for secret environment variables, read the Manage secrets and env vars page to troubleshoot. | Enable GitHub Pages on the batch repo with the following settings. | Source: Deploy from branch | Branch: gh-pages /(root) | . | The step above will trigger a new GitHub Action to publish the catalog site to https://middlicomp.github.io/aperitiiif-batch-CHANGEME (where CHANGEME is your new batch namespace) . | Browse the catalog site to make sure all the IIIF images and manifests are working as expected. | . FIN 🎉 . ",
     "url": "/aperitiiif/craft/publish-the-batch.html#steps",
     "relUrl": "/craft/publish-the-batch.html#steps"
   },"42": {
@@ -259,7 +259,7 @@
   },"43": {
     "doc": "Roadmap",
     "title": "Roadmap Work in Progress!",
-    "content": ". | Current &amp; Upcoming | Past | . ",
+    "content": ". | Current &amp; Upcoming . | For v1.0.0 | . | Past . | For v0.1.0 Released! | . | . ",
     "url": "/aperitiiif/about/roadmap.html#roadmap-work-in-progress",
     "relUrl": "/about/roadmap.html#roadmap-work-in-progress"
   },"44": {
@@ -295,7 +295,7 @@
   },"49": {
     "doc": "0: Set up the batch repository",
     "title": "Steps",
-    "content": ". | Go to the nyu-dss/aperitiiif-batch-template and click “Use this template.” . | Follow the instructions on GitHub to make the new repository with these settings: . | The owner must be nyu-dss | The repository name must be aperitiiif-batch-CHANGEME, where CHANGEME will serve as the unique namespace for the entire batch. Choose wisely! | The repository must be Public | . | When the new repository has been created . | Delete the README.md file | Rename the README-template.md to README.md | Change all of the instances of CHANGEME in the new README.md file to the batch namespace you chose in step 2. | Fill out the remaining info in the new README.md | . | Add the batch contributors (if applicable) as GitHub contributors to the repository. They will need write access but do not need admin access to any repo settings. | . ",
+    "content": ". | Go to the middlicomp/aperitiiif-batch-template and click “Use this template.” . | Follow the instructions on GitHub to make the new repository with these settings: . | . | The owner must be nyu-dss | The repository name must be aperitiiif-batch-CHANGEME, where CHANGEME will serve as the unique namespace for the entire batch. Choose wisely! | The repository must be Public | . | When the new repository has been created | . | Delete the README.md file | Rename the README-template.md to README.md | Change all of the instances of CHANGEME in the new README.md file to the batch namespace you chose in step 2. | Fill out the remaining info in the new README.md | . | Add the batch contributors (if applicable) as GitHub contributors to the repository. They will need write access but do not need admin access to any repo settings. | . ",
     "url": "/aperitiiif/craft/set-up-batch-repository.html#steps",
     "relUrl": "/craft/set-up-batch-repository.html#steps"
   },"50": {

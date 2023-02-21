@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 'Manage secrets and env vars'
-nav_order: 0
+nav_order: 3
 parent: Admin Guides
 ---
 # {{ page.title }} <span class="label label-purple">Work in Progress!</span>

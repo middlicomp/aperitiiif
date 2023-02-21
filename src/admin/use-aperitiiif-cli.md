@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 'Use the aperitiiif cli'
-nav_order: 2
+nav_order: 4
 parent: Admin Guides
 ---
 # {{ page.title }} <span class="label label-purple">Work in Progress!</span>

@@ -52,16 +52,6 @@ parent: Admin Guides
     ```
 - [ ] Check if Docker is installed `docker --version` if not, [install it](https://docs.docker.com/desktop/install/mac-install/).
 - [ ] Make sure that Docker is running by opening the App.
-
-
-~~Create IAM group `sam-service-access` with permissions to manage IAM, S3, Lambda, CloudFormation, and CloudFront.~~  
-~~Create user `aperitiiif-sam-deploy` within `sam-service-access` to inherit policies.~~  
-~~Create an NYU Web Hosting Bitwarden account w/ credentials in Box~~  
-~~Add `aperitiiif-sam-deploy` credentials to NYU Web Hosting Bitwarden account~~  
-~~Download Bitwarden CLI client locally via npm and log in for programmatic access to `aperitiiif-sam-deploy` AWS credentials.~~  
-~~Make sure AWS-CLI, SAM-CLI, and Docker are installed.~~
-~~Make sure Docker is running.~~  
-
 - [ ] Run `aws configure --profile aperitiiif-sam-deploy` with credentials plus `us-east-1` as the default region and `json` as default output format.
 - [ ] Run `cd sam/cloudfront && sam build --use-container`
 - [ ] Run `sam deploy --capabilities CAPABILITY_IAM CAPABILITY_AUTO_EXPAND --guided --profile aperitiiif-sam-deploy`
@@ -69,6 +59,9 @@ parent: Admin Guides
   - SourceBucket: `aperitiiif-serverless-iiif-source-images`
   - Managed S3 bucket: `aws-sam-cli-managed-default-samclisourcebucket-1er0it3bgmcdy`
 - [ ] Create S3 source bucket `aperitiiif-serverless-iiif-source-images`
+
+-------
+WiP
 
 Additional Aperitiiif stuff:
 - [ ] Create S3 bucket for IIIF presentation API JSON `aperitiiif-presentation-api-store` 

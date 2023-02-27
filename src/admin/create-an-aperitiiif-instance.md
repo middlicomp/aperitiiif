@@ -20,7 +20,11 @@ parent: Admin Guides
 
 ## Steps
 
-### 1. Create AWS IAM Groups and Users
+### 1. Create the base repositories in your GitHub Org.
+- [ ] Go to [samvera/serverless-iiif](https://github.com/samvera/serverless-iiif) and create a fork in your GitHub Org.
+- [ ] Go to [middlicomp/aperitiiif-batch-template](https://github.com/middlicomp/aperitiiif-batch-template) and click "Use this template" to create a copy in your GitHub Org.
+
+### 2. Create AWS IAM Groups and Users
 - [ ] Log into your AWS account.
 - [ ] Search "IAM" and navigiate to the IAM Dashboard.
 - [ ] Navigate to "User Groups" under "Access Management"
@@ -43,30 +47,12 @@ parent: Admin Guides
 - [ ] Click "create access key"
 - [ ] Scroll down and IMMEDIATELY click "Download .csv file". Make sure you save these credentials somewhere secure and reliable (e.g., a secure Box account)! You won't be able to see these values on this page again.
 
-## Set up local development enviroment to use AWS CLI
-- [ ] Check if AWS-CLI is installed `aws --version` if not, install it: `brew install awscli`.
-- [ ] Check if AWS SAM CLI is installed `sam --version` if not, install it: 
-    ```
-    brew tap aws/tap
-    brew install aws-sam-cli
-    ```
-- [ ] Check if Docker is installed `docker --version` if not, [install it](https://docs.docker.com/desktop/install/mac-install/).
-- [ ] Make sure that Docker is running by opening the App.
-- [ ] Run `aws configure --profile aperitiiif-sam-deploy` with credentials plus `us-east-1` as the default region and `json` as default output format.
-- [ ] Run `cd sam/cloudfront && sam build --use-container`
-- [ ] Run `sam deploy --capabilities CAPABILITY_IAM CAPABILITY_AUTO_EXPAND --guided --profile aperitiiif-sam-deploy`
-  - Stack Name: `aperitiiif-serverless-iiif`
-  - SourceBucket: `aperitiiif-serverless-iiif-source-images`
-  - Managed S3 bucket: `aws-sam-cli-managed-default-samclisourcebucket-1er0it3bgmcdy`
-- [ ] Create S3 source bucket `aperitiiif-serverless-iiif-source-images`
+## 3. Create S3 Buckets for Source Images and IIIF manifests.
 
--------
-WiP
-
-Additional Aperitiiif stuff:
-- [ ] Create S3 bucket for IIIF presentation API JSON `aperitiiif-presentation-api-store` 
-  - [ ] Enable ACLs on the bucket (in GUI)
-  - [ ] Add the following CORS policy (in GUI)
+- [ ] Create S3 source bucket for source images, e.g, `aperitiiif-source-images` 
+- [ ] Create S3 bucket for IIIF presentation API JSON files, e.g, `aperitiiif-presentation-api-store` 
+  - Enable ACLs on the bucket (in GUI)
+  - Add the following CORS policy (in GUI)
       ``` json
         [
           {
@@ -86,3 +72,28 @@ Additional Aperitiiif stuff:
           }
         ]
       ```
+
+
+## 4. Set up local development enviroment to use AWS CLI
+- [ ] Check if AWS-CLI is installed `aws --version` if not, install it: `brew install awscli`.
+- [ ] Check if AWS SAM CLI is installed `sam --version` if not, install it: 
+    ```
+    brew tap aws/tap
+    brew install aws-sam-cli
+    ```
+- [ ] Check if Docker is installed `docker --version` if not, [install it](https://docs.docker.com/desktop/install/mac-install/).
+- [ ] Make sure that Docker is running by opening the application icon.
+
+## 5. Deploy the Serverless-IIIF intance.
+- [ ] Clone the Serverless-IIIF repository you forked into your GitHub Org to your local machine & cd into it.
+- [ ] Run `aws configure --profile aperitiiif-sam-deploy` with the AWS user credentials you saved, plus `us-east-1` as the default region and `json` as default output format.
+
+
+----
+
+[ NOT TESTED YET!]
+
+- [ ] Run `cd sam/cloudfront && sam build --use-container`
+- [ ] Run `sam deploy --capabilities CAPABILITY_IAM CAPABILITY_AUTO_EXPAND --guided --profile aperitiiif-sam-deploy`
+  - Stack Name: `aperitiiif-serverless-iiif`
+  - SourceBucket: `YOUR SOURCE IMAGE BUCKET`

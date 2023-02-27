@@ -115,250 +115,262 @@
   },"19": {
     "doc": "Create an Aperitiiif instance",
     "title": "Steps",
-    "content": "1. Create AWS IAM Groups and Users . | Log into your AWS account. | Search “IAM” and navigiate to the IAM Dashboard. | Navigate to “User Groups” under “Access Management” | Click the “Create group” button. | Name the group sam-service-access and scroll down to “Attach permissions policies - Optional.” Then search for and add the following policies: . | IAMFullAccess | AmazonS3FullAccess | AWSLambda_FullAccess | AWSCloudFormationFullAccess | CloudFrontFullAccess | . | Click “Create group” | Still within the IAM Dashboard, navigate to “Users” under “Access Management” | Click the “Add users” button. | Create a user named aperitiiif-sam-deploy and click “Next” | Under “Set permissions” select “Add user to group” and check the sam-service-access group you just created. Then click “Next” | Scroll down and click “Create user” | Click on your new aperitiiif-sam-deploy user and navigate to the “Security credentials” tab. | Scroll down to “Access keys” and click the “Create access key” button. | Select “Command Line Interface (CLI)” option, check the “I understand….” box and click “Next” | Click “create access key” | Scroll down and IMMEDIATELY click “Download .csv file”. Make sure you save these credentials somewhere secure and reliable (e.g., a secure Box account)! You won’t be able to see these values on this page again. | . ",
+    "content": "1. Create the base repositories in your GitHub Org. | Go to samvera/serverless-iiif and create a fork in your GitHub Org. | Go to middlicomp/aperitiiif-batch-template and click “Use this template” to create a copy in your GitHub Org. | . 2. Create AWS IAM Groups and Users . | Log into your AWS account. | Search “IAM” and navigiate to the IAM Dashboard. | Navigate to “User Groups” under “Access Management” | Click the “Create group” button. | Name the group sam-service-access and scroll down to “Attach permissions policies - Optional.” Then search for and add the following policies: . | IAMFullAccess | AmazonS3FullAccess | AWSLambda_FullAccess | AWSCloudFormationFullAccess | CloudFrontFullAccess | . | Click “Create group” | Still within the IAM Dashboard, navigate to “Users” under “Access Management” | Click the “Add users” button. | Create a user named aperitiiif-sam-deploy and click “Next” | Under “Set permissions” select “Add user to group” and check the sam-service-access group you just created. Then click “Next” | Scroll down and click “Create user” | Click on your new aperitiiif-sam-deploy user and navigate to the “Security credentials” tab. | Scroll down to “Access keys” and click the “Create access key” button. | Select “Command Line Interface (CLI)” option, check the “I understand….” box and click “Next” | Click “create access key” | Scroll down and IMMEDIATELY click “Download .csv file”. Make sure you save these credentials somewhere secure and reliable (e.g., a secure Box account)! You won’t be able to see these values on this page again. | . ",
     "url": "/aperitiiif/admin/create-an-aperitiiif-instance.html#steps",
     "relUrl": "/admin/create-an-aperitiiif-instance.html#steps"
   },"20": {
     "doc": "Create an Aperitiiif instance",
-    "title": "Set up local development enviroment to use AWS CLI",
-    "content": ". | Check if AWS-CLI is installed aws --version if not, install it: brew install awscli. | Check if AWS SAM CLI is installed sam --version if not, install it: brew tap aws/tap brew install aws-sam-cli . | Check if Docker is installed docker --version if not, install it. | Make sure that Docker is running by opening the App. | Run aws configure --profile aperitiiif-sam-deploy with credentials plus us-east-1 as the default region and json as default output format. | Run cd sam/cloudfront &amp;&amp; sam build --use-container | Run sam deploy --capabilities CAPABILITY_IAM CAPABILITY_AUTO_EXPAND --guided --profile aperitiiif-sam-deploy . | Stack Name: aperitiiif-serverless-iiif | SourceBucket: aperitiiif-serverless-iiif-source-images | Managed S3 bucket: aws-sam-cli-managed-default-samclisourcebucket-1er0it3bgmcdy | . | Create S3 source bucket aperitiiif-serverless-iiif-source-images | . WiP . Additional Aperitiiif stuff: . | Create S3 bucket for IIIF presentation API JSON aperitiiif-presentation-api-store . | Enable ACLs on the bucket (in GUI) | Add the following CORS policy (in GUI) [ { \"AllowedHeaders\": [ \"Authorization\" ], \"AllowedMethods\": [ \"GET\", \"HEAD\" ], \"AllowedOrigins\": [ \"*\" ], \"ExposeHeaders\": [ \"Access-Control-Allow-Origin\" ] } ] . | . | . ",
-    "url": "/aperitiiif/admin/create-an-aperitiiif-instance.html#set-up-local-development-enviroment-to-use-aws-cli",
-    "relUrl": "/admin/create-an-aperitiiif-instance.html#set-up-local-development-enviroment-to-use-aws-cli"
+    "title": "3. Create S3 Buckets for Source Images and IIIF manifests.",
+    "content": ". | Create S3 source bucket for source images, e.g, aperitiiif-source-images | Create S3 bucket for IIIF presentation API JSON files, e.g, aperitiiif-presentation-api-store . | Enable ACLs on the bucket (in GUI) | Add the following CORS policy (in GUI) [ { \"AllowedHeaders\": [ \"Authorization\" ], \"AllowedMethods\": [ \"GET\", \"HEAD\" ], \"AllowedOrigins\": [ \"*\" ], \"ExposeHeaders\": [ \"Access-Control-Allow-Origin\" ] } ] . | . | . ",
+    "url": "/aperitiiif/admin/create-an-aperitiiif-instance.html#3-create-s3-buckets-for-source-images-and-iiif-manifests",
+    "relUrl": "/admin/create-an-aperitiiif-instance.html#3-create-s3-buckets-for-source-images-and-iiif-manifests"
   },"21": {
+    "doc": "Create an Aperitiiif instance",
+    "title": "4. Set up local development enviroment to use AWS CLI",
+    "content": ". | Check if AWS-CLI is installed aws --version if not, install it: brew install awscli. | Check if AWS SAM CLI is installed sam --version if not, install it: brew tap aws/tap brew install aws-sam-cli . | Check if Docker is installed docker --version if not, install it. | Make sure that Docker is running by opening the application icon. | . ",
+    "url": "/aperitiiif/admin/create-an-aperitiiif-instance.html#4-set-up-local-development-enviroment-to-use-aws-cli",
+    "relUrl": "/admin/create-an-aperitiiif-instance.html#4-set-up-local-development-enviroment-to-use-aws-cli"
+  },"22": {
+    "doc": "Create an Aperitiiif instance",
+    "title": "5. Deploy the Serverless-IIIF intance.",
+    "content": ". | Clone the Serverless-IIIF repository you forked into your GitHub Org to your local machine &amp; cd into it. | Run aws configure --profile aperitiiif-sam-deploy with the AWS user credentials you saved, plus us-east-1 as the default region and json as default output format. | . [ NOT TESTED YET!] . | Run cd sam/cloudfront &amp;&amp; sam build --use-container | Run sam deploy --capabilities CAPABILITY_IAM CAPABILITY_AUTO_EXPAND --guided --profile aperitiiif-sam-deploy . | Stack Name: aperitiiif-serverless-iiif | SourceBucket: YOUR SOURCE IMAGE BUCKET | . | . ",
+    "url": "/aperitiiif/admin/create-an-aperitiiif-instance.html#5-deploy-the-serverless-iiif-intance",
+    "relUrl": "/admin/create-an-aperitiiif-instance.html#5-deploy-the-serverless-iiif-intance"
+  },"23": {
     "doc": "Create an Aperitiiif instance",
     "title": "Create an Aperitiiif instance",
     "content": " ",
     "url": "/aperitiiif/admin/create-an-aperitiiif-instance.html",
     "relUrl": "/admin/create-an-aperitiiif-instance.html"
-  },"22": {
+  },"24": {
     "doc": "3: Create the batch metadata",
     "title": "3: Create the batch metadata Work in Progress!",
     "content": " ",
     "url": "/aperitiiif/craft/create-batch-metadata.html#3-create-the-batch-metadata-work-in-progress",
     "relUrl": "/craft/create-batch-metadata.html#3-create-the-batch-metadata-work-in-progress"
-  },"23": {
+  },"25": {
     "doc": "3: Create the batch metadata",
     "title": "Role Contributor",
     "content": ". | The user(s) responsible for curating the actual batch data should follow this guide with some guidance from an NYU DSS admin as needed. | . ",
     "url": "/aperitiiif/craft/create-batch-metadata.html#role-contributor",
     "relUrl": "/craft/create-batch-metadata.html#role-contributor"
-  },"24": {
+  },"26": {
     "doc": "3: Create the batch metadata",
     "title": "Objective",
     "content": ". | Create a CSV spreadsheet of metadata to describe each item in your batch. | . ",
     "url": "/aperitiiif/craft/create-batch-metadata.html#objective",
     "relUrl": "/craft/create-batch-metadata.html#objective"
-  },"25": {
+  },"27": {
     "doc": "3: Create the batch metadata",
     "title": "Steps",
     "content": ". | Create your spreadsheet in your preferred software. Google Sheets or Open Office are recommended. Microsoft Excel is strongly discouraged because it uses a fickle ANSI encoding scheme that hides line break characters and often garbles spreadsheet data. Take our word for it (no pun intended) and avoid Microsoft Office for this work! . | Add the first three column headers: id, label, and description. The first is required for aperitiiif to work and the second and third are highly encouraged. | Add a row for each item you created in the last tutorial and fill in the id column. For the example batch in the last tutorial, this would look like the following: . | id | label | description | . | 001 | My first label | Description for my first item… | . | 002 | My second label | Description for my second item… | . | 003 | My third label | Description for my third item… | . | 004 | My fourth label | Description for my fourth item… | . | 005 | My fifth label | Description for my fifth item… | . If your item has multiple files, they will be automatically loaded as long as you followed the instructions in 2: Collect the batch images. The metadata in each row should refer to the entire item; Aperitiiif does not currently support asset-level metadata (e.g., labels for each page in a book item.) . | Next fill in the label and description fields for the items. | Lastly, if you have custom metadata that you would like to display in the final IIIF manifests, you can create new columns. To be shown, the header name needs to have the prefix meta. For example, to have the IIIF manifests to show “Place of Origin” information, you would add the following: . | id | label | description | meta.Place of Origin | . | 001 |   |   | Ogulin, Croatia | . | 002 |   |   | Borilovets, Vidin | . | 003 |   |   | Gomesende, Galicia | . | 004 |   |   | Chai Chumphon, Uttaradit | . | 005 |   |   | Bo Suphan, Suphan Buri | . Every single row must have a unique id that matches a batch item. For every other column (e.g., description), a blank field is OK; it just won’t show up in the manifest. For this reason, a blank is preferable to something like N/A, which will clutter the manifest. | When your spreadsheet is complete (it can always be updated later!) save it then export a copy to CSV format using UTF-8 encoding. | Move the exported CSV into the folder you created in the last tutorial (e.g., batch_workspace) and rename it records.csv | . ",
     "url": "/aperitiiif/craft/create-batch-metadata.html#steps",
     "relUrl": "/craft/create-batch-metadata.html#steps"
-  },"26": {
+  },"28": {
     "doc": "3: Create the batch metadata",
     "title": "3: Create the batch metadata",
     "content": " ",
     "url": "/aperitiiif/craft/create-batch-metadata.html",
     "relUrl": "/craft/create-batch-metadata.html"
-  },"27": {
+  },"29": {
     "doc": "Credits",
     "title": "Credits",
     "content": "Development 🛠️ . | @mnyrop | . Ideas + Discussion 💡 . | @tpendragon | @aprovoNYU | @jojokarlin | @lappert | . User Testing 🧑‍💻 . | @coblezc | @rbzwillits | @ts1877 | . Thanks also to the authors and maintainers of the following open source libraries . | serverless-iiif | o’sullivan | . ",
     "url": "/aperitiiif/about/credits.html",
     "relUrl": "/about/credits.html"
-  },"28": {
+  },"30": {
     "doc": "Deploy updates to Serverless-IIIF",
     "title": "Deploy updates to Serverless-IIIF Work in Progress!",
     "content": " ",
     "url": "/aperitiiif/admin/deploy-updates-to-serverless-iiif.html#deploy-updates-to-serverless-iiif-work-in-progress",
     "relUrl": "/admin/deploy-updates-to-serverless-iiif.html#deploy-updates-to-serverless-iiif-work-in-progress"
-  },"29": {
+  },"31": {
     "doc": "Deploy updates to Serverless-IIIF",
     "title": "Role Admin",
     "content": " ",
     "url": "/aperitiiif/admin/deploy-updates-to-serverless-iiif.html#role-admin",
     "relUrl": "/admin/deploy-updates-to-serverless-iiif.html#role-admin"
-  },"30": {
+  },"32": {
     "doc": "Deploy updates to Serverless-IIIF",
     "title": "Steps",
     "content": "TO DO . ",
     "url": "/aperitiiif/admin/deploy-updates-to-serverless-iiif.html#steps",
     "relUrl": "/admin/deploy-updates-to-serverless-iiif.html#steps"
-  },"31": {
+  },"33": {
     "doc": "Deploy updates to Serverless-IIIF",
     "title": "Deploy updates to Serverless-IIIF",
     "content": " ",
     "url": "/aperitiiif/admin/deploy-updates-to-serverless-iiif.html",
     "relUrl": "/admin/deploy-updates-to-serverless-iiif.html"
-  },"32": {
+  },"34": {
     "doc": "Craft a Batch",
     "title": "Craft a Batch Work in Progress!",
     "content": " ",
     "url": "/aperitiiif/get-started.html#craft-a-batch-work-in-progress",
     "relUrl": "/get-started.html#craft-a-batch-work-in-progress"
-  },"33": {
+  },"35": {
     "doc": "Craft a Batch",
     "title": "Craft a Batch",
     "content": " ",
     "url": "/aperitiiif/get-started.html",
     "relUrl": "/get-started.html"
-  },"34": {
+  },"36": {
     "doc": "About",
     "title": "Aperitiiif Work in Progress!",
     "content": "Craft batch publishing with serverless IIIF for digital research and scholarship. Aperitiiif is a workflow and set of components for batch publishing IIIF-compliant image collections. It addresses the needs of research and scholarly collections—needs often distinct from collections formally acquired and stewarded by research institutions. Aperitiiif leverages a multi-tenant serverless-iiif implementation on AWS. “Batches” (i.e., discrete research collections) are managed via GitHub repos. GitHub handles all of the scoped user auth, GitHub Actions workflows create the IIIF manifests and deploy the generated resources to AWS, and GitHub Pages hosts an automated catalog site to present items for reuse. This architecture enables flexible user contributions with lower overhead for financial cost and technical maintenance. ",
     "url": "/aperitiiif/#aperitiiif-work-in-progress",
     "relUrl": "/#aperitiiif-work-in-progress"
-  },"35": {
+  },"37": {
     "doc": "About",
     "title": "About",
     "content": " ",
     "url": "/aperitiiif/",
     "relUrl": "/"
-  },"36": {
+  },"38": {
     "doc": "Manage secrets and env vars",
     "title": "Manage secrets and env vars Work in Progress!",
     "content": " ",
     "url": "/aperitiiif/admin/manage-secrets-and-vars.html#manage-secrets-and-env-vars-work-in-progress",
     "relUrl": "/admin/manage-secrets-and-vars.html#manage-secrets-and-env-vars-work-in-progress"
-  },"37": {
+  },"39": {
     "doc": "Manage secrets and env vars",
     "title": "Role Admin",
     "content": ". | The user following this guide must have admin permissions to view and update the nyu-dss GitHub organization settings. | . ",
     "url": "/aperitiiif/admin/manage-secrets-and-vars.html#role-admin",
     "relUrl": "/admin/manage-secrets-and-vars.html#role-admin"
-  },"38": {
+  },"40": {
     "doc": "Manage secrets and env vars",
     "title": "Steps",
     "content": "TO DO . ",
     "url": "/aperitiiif/admin/manage-secrets-and-vars.html#steps",
     "relUrl": "/admin/manage-secrets-and-vars.html#steps"
-  },"39": {
+  },"41": {
     "doc": "Manage secrets and env vars",
     "title": "Manage secrets and env vars",
     "content": " ",
     "url": "/aperitiiif/admin/manage-secrets-and-vars.html",
     "relUrl": "/admin/manage-secrets-and-vars.html"
-  },"40": {
+  },"42": {
     "doc": "Overview",
     "title": "Overview Work in Progress!",
     "content": ". | Glossary | Relevant repositories | Service architecture . | Diagram | Scoped components (1 per batch) | Shared components (1 per service) | . | . ",
     "url": "/aperitiiif/about/overview.html#overview-work-in-progress",
     "relUrl": "/about/overview.html#overview-work-in-progress"
-  },"41": {
+  },"43": {
     "doc": "Overview",
     "title": "Glossary",
     "content": "| IIIF Manifest | The primary unit for IIIF: a JSON file that bundles metadata with item structure to allow frictionless re-use. | . | Batch | A discrete collection of image-based items that are similar enough to be described in a single spreadsheet. | . | Item | A single IIIF thing (e.g., a book, front and back of a poster, a scanned photograph). An item can comprise many image assets. | . | Asset | A single image file (e.g., .jpg, .tif) belonging to an item. | . | Record | Metadata for a single item (not collection-wide, not asset-specific). Processed as a single spreadsheet row. | . ",
     "url": "/aperitiiif/about/overview.html#glossary",
     "relUrl": "/about/overview.html#glossary"
-  },"42": {
+  },"44": {
     "doc": "Overview",
     "title": "Relevant repositories",
     "content": ". | aperitiiif-cli : ruby gem for processing batches | aperitiiif-batch-template : template repository for creating batches; includes github actions workflows, gem configs, and project scaffolding. | aperitiiif : documentation for the project; publishes to this site on github pages | . ",
     "url": "/aperitiiif/about/overview.html#relevant-repositories",
     "relUrl": "/about/overview.html#relevant-repositories"
-  },"43": {
+  },"45": {
     "doc": "Overview",
     "title": "Service architecture",
     "content": "Diagram . Scoped components (1 per batch) . | Name | Type/Tool | Purpose | . | Batch repo | GitHub repository | Stores batch image data, metadata, and configuration | . | YAML Workflows | GitHub Actions | Reusable processes to lint and publish batch data | . | Catalog site | GitHub Pages | For graphical batch reuse &amp; discovery | . Shared components (1 per service) . | Name | Type/Tool | Purpose | . | IIIF Presentation API | AWS S3 Bucket | Where the IIIF Presentation API manifests for all batches are published | . | IIIF Source Image API S3 Bucket | AWS S3 Bucket | Where the source images for all batches are stored (in jpg format) | . | Serverless-IIIF implementation | AWS Lambda | The \"serverless\" image server that produces IIIF Image API-compliant derivatives | . | Organization Secrets | GitHub secrets store | Where AWS credentials are managed and stored | . ",
     "url": "/aperitiiif/about/overview.html#service-architecture",
     "relUrl": "/about/overview.html#service-architecture"
-  },"44": {
+  },"46": {
     "doc": "Overview",
     "title": "Overview",
     "content": " ",
     "url": "/aperitiiif/about/overview.html",
     "relUrl": "/about/overview.html"
-  },"45": {
+  },"47": {
     "doc": "5: Publish the batch!",
     "title": "5: Publish the batch! Work in Progress!",
     "content": " ",
     "url": "/aperitiiif/craft/publish-the-batch.html#5-publish-the-batch-work-in-progress",
     "relUrl": "/craft/publish-the-batch.html#5-publish-the-batch-work-in-progress"
-  },"46": {
+  },"48": {
     "doc": "5: Publish the batch!",
     "title": "Role Admin",
     "content": ". | The user following these guides should be an NYU DSS staff member who has access to the batch repo’s settings. | They shouldn’t need access to the GitHub organization’s settings. | . ",
     "url": "/aperitiiif/craft/publish-the-batch.html#role-admin",
     "relUrl": "/craft/publish-the-batch.html#role-admin"
-  },"47": {
+  },"49": {
     "doc": "5: Publish the batch!",
     "title": "Steps",
     "content": ". | Make sure GitHub Actions are enabled on the batch repository and trigger the actions to run. You can do this manually in the Actions GUI or by making a small temporary commit (like adding an empty test.txt file to the repo.) | Make sure the Lint and Deploy actions pass. When the Deploy action is finished, it will have published: . | the batch images to one AWS S3 bucket | the completed IIIF manifests to another S3 bucket, and | a small catalog site to the gh-pages branch of the repo. (See the Service Architecture) | . The secret AWS keys needed for the Deploy action should already be configured in the NYU DSS GitHub organization and will be inherited automatically by the batch repo. If the Deploy action shows errors looking for secret environment variables, read the Manage secrets and env vars page to troubleshoot. | Enable GitHub Pages on the batch repo with the following settings. | Source: Deploy from branch | Branch: gh-pages /(root) | . | The step above will trigger a new GitHub Action to publish the catalog site to https://middlicomp.github.io/aperitiiif-batch-CHANGEME (where CHANGEME is your new batch namespace) . | Browse the catalog site to make sure all the IIIF images and manifests are working as expected. | . FIN 🎉 . ",
     "url": "/aperitiiif/craft/publish-the-batch.html#steps",
     "relUrl": "/craft/publish-the-batch.html#steps"
-  },"48": {
+  },"50": {
     "doc": "5: Publish the batch!",
     "title": "5: Publish the batch!",
     "content": " ",
     "url": "/aperitiiif/craft/publish-the-batch.html",
     "relUrl": "/craft/publish-the-batch.html"
-  },"49": {
+  },"51": {
     "doc": "Roadmap",
     "title": "Roadmap Work in Progress!",
     "content": ". | Current &amp; Upcoming . | For v1.0.0 | . | Past . | For v0.1.0 Released! | . | . ",
     "url": "/aperitiiif/about/roadmap.html#roadmap-work-in-progress",
     "relUrl": "/about/roadmap.html#roadmap-work-in-progress"
-  },"50": {
+  },"52": {
     "doc": "Roadmap",
     "title": "Current &amp; Upcoming",
     "content": "For v1.0.0 . | Redeploy clean infrax &amp; document . | Rebuild S3 buckets from scratch | Redeploy serverless-iiif with overrides from scratch | Create guide for deployments &amp; updates (convert from log) | Update secrets names &amp; values in template repo and afiles repo | . | Document user workflows, potential collection onboarding policy . | Create docs site | Version MVP template repo | Test template repo with docs | . | Get feedback . | From Bryan | From IIIF-C | From EdTech | From ISAW | From DLTS/DRSR | . | Management + policy scan . | Look into potential subdirs for image source bucket | Look into options for cost sharing, chartfield routing(?) | . | Future features . | Look into supporting IIIF Presentation v3 | Manifest validation | . | . ",
     "url": "/aperitiiif/about/roadmap.html#current--upcoming",
     "relUrl": "/about/roadmap.html#current--upcoming"
-  },"51": {
+  },"53": {
     "doc": "Roadmap",
     "title": "Past",
     "content": "For v0.1.0 Released! . | Deploy serverless-iiif to NYU DSS AWS account via SAM CLI | Configure S3 bucket to hold ‘source’ images | Create template repo with sample images and workflows. | Create aperitiiif gem . | implement thor cli | use rubocop | process multi-asset items | use parallel gem for multi-thread processing | process item-level metadata | generate IIIF presentation manifest.json files | generate IIIF presentation collection.json file | generate index.html listing | generate index.json listing | write tests!! | write command to lint batch, flag issues | . | . ",
     "url": "/aperitiiif/about/roadmap.html#past",
     "relUrl": "/about/roadmap.html#past"
-  },"52": {
+  },"54": {
     "doc": "Roadmap",
     "title": "Roadmap",
     "content": " ",
     "url": "/aperitiiif/about/roadmap.html",
     "relUrl": "/about/roadmap.html"
-  },"53": {
+  },"55": {
     "doc": "0: Set up the batch repository",
     "title": "0: Set up the batch repository Work in Progress!",
     "content": " ",
     "url": "/aperitiiif/craft/set-up-batch-repository.html#0-set-up-the-batch-repository-work-in-progress",
     "relUrl": "/craft/set-up-batch-repository.html#0-set-up-the-batch-repository-work-in-progress"
-  },"54": {
+  },"56": {
     "doc": "0: Set up the batch repository",
     "title": "Role Admin",
     "content": ". | The user following these initial setup steps must have user permissions to create a new repository in the nyu-dss GitHub organization. | They also should have access to repository settings. | . ",
     "url": "/aperitiiif/craft/set-up-batch-repository.html#role-admin",
     "relUrl": "/craft/set-up-batch-repository.html#role-admin"
-  },"55": {
+  },"57": {
     "doc": "0: Set up the batch repository",
     "title": "Steps",
     "content": ". | Go to the middlicomp/aperitiiif-batch-template and click “Use this template.” . | Follow the instructions on GitHub to make the new repository with these settings: . | . | The owner must be nyu-dss | The repository name must be aperitiiif-batch-CHANGEME, where CHANGEME will serve as the unique namespace for the entire batch. Choose wisely! | The repository must be Public | . | When the new repository has been created | . | Delete the README.md file | Rename the README-template.md to README.md | Change all of the instances of CHANGEME in the new README.md file to the batch namespace you chose in step 2. | Fill out the remaining info in the new README.md | . | Add the batch contributors (if applicable) as GitHub contributors to the repository. They will need write access but do not need admin access to any repo settings. | . ",
     "url": "/aperitiiif/craft/set-up-batch-repository.html#steps",
     "relUrl": "/craft/set-up-batch-repository.html#steps"
-  },"56": {
+  },"58": {
     "doc": "0: Set up the batch repository",
     "title": "0: Set up the batch repository",
     "content": " ",
     "url": "/aperitiiif/craft/set-up-batch-repository.html",
     "relUrl": "/craft/set-up-batch-repository.html"
-  },"57": {
+  },"59": {
     "doc": "Use the aperitiiif cli",
     "title": "Use the aperitiiif cli Work in Progress!",
     "content": " ",
     "url": "/aperitiiif/admin/use-aperitiiif-cli.html#use-the-aperitiiif-cli-work-in-progress",
     "relUrl": "/admin/use-aperitiiif-cli.html#use-the-aperitiiif-cli-work-in-progress"
-  },"58": {
+  },"60": {
     "doc": "Use the aperitiiif cli",
     "title": "Role Admin",
     "content": " ",
     "url": "/aperitiiif/admin/use-aperitiiif-cli.html#role-admin",
     "relUrl": "/admin/use-aperitiiif-cli.html#role-admin"
-  },"59": {
+  },"61": {
     "doc": "Use the aperitiiif cli",
     "title": "Steps",
     "content": "TO DO . ",
     "url": "/aperitiiif/admin/use-aperitiiif-cli.html#steps",
     "relUrl": "/admin/use-aperitiiif-cli.html#steps"
-  },"60": {
+  },"62": {
     "doc": "Use the aperitiiif cli",
     "title": "Use the aperitiiif cli",
     "content": " ",

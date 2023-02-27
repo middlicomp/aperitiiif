@@ -2,7 +2,7 @@
 layout: page
 title: '3: Create the batch metadata'
 nav_order: 3
-parent: Craft a Batch
+parent: Craft a collection "batch"
 ---
 # {{ page.title }} <span class="label label-purple">Work in Progress!</span>
 {: .fs-9 }

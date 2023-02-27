@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Craft a Batch
+title: Set up an Aperitiiif service instance
 nav_order: 2
 has_children: true
 ---

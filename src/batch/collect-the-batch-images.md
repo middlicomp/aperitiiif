@@ -2,7 +2,7 @@
 layout: page
 title: '2: Collect the batch images'
 nav_order: 2
-parent: Craft a Batch
+parent: Craft a collection "batch"
 ---
 # {{ page.title }} <span class="label label-purple">Work in Progress!</span>
 {: .fs-9 }

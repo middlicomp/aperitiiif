@@ -2,7 +2,7 @@
 layout: page
 title: '1: Update batch configuration'
 nav_order: 1
-parent: Craft a Batch
+parent: Craft a collection "batch"
 ---
 # {{ page.title }} <span class="label label-purple">Work in Progress!</span>
 {: .fs-9 }

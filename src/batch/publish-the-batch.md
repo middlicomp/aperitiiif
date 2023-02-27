@@ -2,7 +2,7 @@
 layout: page
 title: "5: Publish the batch!"
 nav_order: 5
-parent: Craft a Batch
+parent: Craft a collection "batch"
 ---
 
 # {{ page.title }} <span class="label label-purple">Work in Progress!</span>

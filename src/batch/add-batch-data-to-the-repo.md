@@ -2,7 +2,7 @@
 layout: page
 title: "4: Add batch data to the repository"
 nav_order: 4
-parent: Craft a Batch
+parent: Craft a collection "batch"
 ---
 
 # {{ page.title }} <span class="label label-purple">Work in Progress!</span>

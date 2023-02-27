@@ -2,7 +2,7 @@
 layout: page
 title: "0: Set up the batch repository"
 nav_order: 0
-parent: Craft a Batch
+parent: Craft a collection "batch"
 ---
 
 # {{ page.title }} <span class="label label-purple">Work in Progress!</span>
